@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ヤンガス識別ツール</title>
+        <script src="./js/dungeon.js"></script>
+        <script src="./js/buki.js"></script>
+        <script src="./js/tate.js"></script>
+        <script src="./js/kusa.js"></script>
+        <script src="./js/makimono.js"></script>
+        <script src="./js/omamori.js"></script>
+        <script src="./js/tubo.js"></script>
+        <script src="./js/tue.js"></script>
+        <script src="./js/yubiwa.js"></script>
+        <script src="./js/syu.js"></script>
+        <script src="./js/shikibetuFlag.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.4.2/decimal.min.js"></script>
+    </head>
+    <body>
+        <h1>少年ヤンガス識別ツール</h1>
+        <div id="parent">
+            <div id="tab1">
+                <form>
+                    <table>
+                        <input type="reset" onclick="let appItem = document.getElementById('items')
+                        appItem.innerHTML = '';">
+                        <tr><th>ダンジョン</th>
+                            <td>
+                                <select name="dungeon">
+                                    <option value="まどわしの森">まどわしの森</option>
+                                    <option value="カンダタの遺跡昼の間">カンダタの遺跡昼の間</option>
+                                    <option value="カンダタの遺跡夜の間">カンダタの遺跡夜の間</option>
+                                    <option value="あやしの地下水道">あやしの地下水道</option>
+                                    <option value="ならくの洞窟">ならくの洞窟</option>
+                                    <option value="しゃくねつの洞穴">しゃくねつの洞穴</option>
+                                    <option value="まぼろし雪の迷宮">まぼろし雪の迷宮</option>
+                                    <option value="盗賊王の迷宮">盗賊王の迷宮</option>
+                                    <option value="おそろしの大水道">おそろしの大水道</option>
+                                    <option value="しゃくねつの大洞くつ">しゃくねつの大洞くつ</option>
+                                    <option value="まぼろしの大雪道">まぼろしの大雪道</option>
+                                    <option value="いにしえの闘技場">いにしえの闘技場</option>
+                                    <option value="のろわれた地下庭園">のろわれた地下庭園</option>
+                                    <option value="盗賊王の大宮殿" selected>盗賊王の大宮殿</option>
+                                    <option value="もっとまどわしの森">もっとまどわしの森</option>
+                                    <option value="竜骨の宝物庫">竜骨の宝物庫</option>
+                                    <option value="夢幻の宝物庫">夢幻の宝物庫</option>
+                                    <option value="魔導の宝物庫">魔導の宝物庫</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><th>種類</th>
+                            <td>
+                                <select name="syu">
+                                    <option value="武器">武器</option>
+                                    <option value="盾">盾</option>
+                                    <option value="指輪">指輪</option>
+                                    <option value="お守り">お守り</option>
+                                    <option value="草">草</option>
+                                    <option value="巻物">巻物</option>
+                                    <option value="杖">杖</option>
+                                    <option value="壺">壺</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>売買</th>
+                            <td>
+                                <label><input type="radio" name="urikai" value="1" checked>買値</label>
+                                <label><input type="radio" name="urikai" value="2">売値</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>プラス・回数</th>
+                            <td><input type="number" name="kazu" value="0" min="0"></td>
+                        </tr>
+                        <tr>
+                            <th>価格</th>
+                            <td><input type="tel" name="kakaku" min="0"></td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- <input type="button" id="start" value="識別開始"> -->
+                <div id="items"></div>
+            </div>
+            <div id="tab2">
+                <table id="allListTable">
+                </table>
+            </div>
+        </div>
+        
+        <script src="./js/shikibetsu.js"></script>
+    </body>
+</html>
