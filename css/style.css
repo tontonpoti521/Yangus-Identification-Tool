@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+#tab1 {
+  background-color: lightblue;
+}
+#tab2 {
+  background-color: lightgreen;
+}
+
+@media (min-width: 600px) {
+  #parent {
+    display: flex;
+  }
+  #tab1 {
+    flex-grow: 1;
+  }
+  #tab2 {
+    flex-grow: 1;
+  }
+}
